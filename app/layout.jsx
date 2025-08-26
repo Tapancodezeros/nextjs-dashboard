@@ -1,4 +1,5 @@
 import '@/app/ui/global.css';
+
 const RootLayout = ({children}) => {
   return (
     <>
