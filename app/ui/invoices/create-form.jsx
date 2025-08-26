@@ -1,4 +1,3 @@
-import { CustomerField } from '@/app/lib/definitions';
 import Link from 'next/link';
 import {
   CheckIcon,
@@ -6,12 +5,13 @@ import {
   CurrencyDollarIcon,
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
-import { Button } from '@/app/ui/button';
+import Button from '@/app/ui/button';
+import { createInvoice } from '@/app/lib/actions';
 
 const Form = ({ customers }) => {
   return (
     <>
-      <form>
+      <form action={createInvoice}>
         <div className="rounded-md bg-gray-50 p-4 md:p-6">
           {/* Customer Name */}
           <div className="mb-4">
@@ -111,5 +111,6 @@ const Form = ({ customers }) => {
       </form>
     </>
   );
-}
+};
+
 export default Form;

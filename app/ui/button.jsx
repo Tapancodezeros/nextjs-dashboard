@@ -1,8 +1,5 @@
 import clsx from 'clsx';
 
-// interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-//   children: React.ReactNode;
-// }
 const Button = ({ children, className, ...rest }) => {
   return (
     <button
@@ -15,5 +12,6 @@ const Button = ({ children, className, ...rest }) => {
       {children}
     </button>
   );
-}
+};
+
 export default Button;
