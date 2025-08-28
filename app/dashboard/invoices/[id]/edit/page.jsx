@@ -3,9 +3,8 @@ import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
 import { notFound } from 'next/navigation';
 export default async function Page({ params }) {
-  console.log("🚀 ~ Page ~ params:", params)
   const id = params.id;
-  console.log("🚀 ~ Page ~ id:", id)
+  
 
   const [invoice, customers] = await Promise.all([
     fetchInvoiceById(id),
