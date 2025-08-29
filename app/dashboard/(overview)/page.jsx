@@ -5,7 +5,9 @@ import { lusitana } from '@/app/ui/fonts';
 import { Suspense } from 'react';
 import { RevenueChartSkeleton , LatestInvoicesSkeleton,} from '@/app/ui/skeletons';
 import {fetchCardData}from '@/app/lib/data';
-;
+
+export const dynamic = 'force-dynamic';
+
 export default async function Page() {
 
   const cardData = await fetchCardData();
